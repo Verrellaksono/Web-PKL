@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root {
+    --warna : rgba(43, 81, 149, 1);
+}
+
+body {
+    margin: 0%;
+    background-color: var(--warna);
+    overflow-x: hidden;
+}
+
+
+/* navbar */
+.head{
+    height: 800px;
+    background-image: url(https://i.pinimg.com/564x/e1/48/72/e14872ad1266367f1ddecd07fc471dc9.jpg);
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 10px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    top: 0;
+}
+.navbar.sticky{
+    padding: 0px 0;
+    /* background: rgba(37, 42, 66, 1); */
+    background: rgba(250, 179, 42, 1);
+    
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    background-image: url(logo-removebg-preview.png);
+    width: 50%;
+    height: auto;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: rgba(44, 187, 231, 1);
+}
+.navbar.sticky .menu li a:hover{
+    color: rgba(250, 179, 42, 1);
+}
+
+/* menu btn styling */
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+.blue{
+    background-color: blue;
+}
+
+/*RESPONSIVE*/
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+}
+/* navbar end */
+
+/* header */
+.padding-top-max{
+    padding-top: 5.8%;
+}
+
+.padding-bottom-med{
+    padding-bottom:10.5%;
+}
+
+.big-text{
+    font-size: 10em;
+}
+
+.img-head{
+    width: 67.4%;
+    height: auto;
+    position: absolute;
+    left: 14%;
+    top: 0%;
+}
+
+.main-img{
+    width: 50.5%;
+    position: absolute;
+    left: 49.537%;
+    top: 0%;
+    z-index: -1;
+}
+
+.dark-blue{
+    background: rgba(43, 81, 149, 1);
+}
+
+.white{
+    background: white;
+}
+
+.white-text{
+    color: white;
+}
+
+.header{
+    height: auto ;
+    margin-top: 10px;
+    /* width: 50%; */
+}
+
+.center{
+    text-align: center;
+}
+
+#information :hover {
+    opacity: 50%;
+    
+}
+/* header end */
+
+/* footer */
+footer{
+    background-color: rgba(43, 81, 149, 1);
+    color: white;
+}
+
+.padding-left{
+    padding-left: 8%;
+}
+
+.link-footer {
+    padding: 0 10px 0 0;
+    color: white;
+    transition: color 1s
+}
+
+.link-footer :hover{
+    color: rgba(37, 42, 66, 1);
+    transition: color 1s
+}
+
+/* footer end */
+
+.nav {
+    display: flex;
+}
+
+#minggu {
+    margin-bottom: -10px;
+}
+
+#batas {
+    margin-bottom: 5px;
+}
+
+.date h6 {
+    padding: -30px;
+}
+
+.t-utama {
+    color: var(--warna);
+}
+
+.light {
+    color: #fff;
+}
+
+.light :hover {
+    color: #000;
+}
+
+.hitam {
+    color: #000;
+}
+
+.hitam :hover {
+    color: #fff;
+}
