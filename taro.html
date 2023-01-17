@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cara Membuat Element Baru Di JavaScript</title>
+</head>
+<style>
+    table.gayabaru {
+        font-family: verdana, arial, sans-serif;
+        font-size: 11px;
+        color: #333333;
+        border-width: 1px;
+        border-color: #666666;
+        border-collapse: collapse;
+        margin: auto;
+    }
+
+    table.gayabaru th {
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #333;
+        background-color: #000;
+        color: #fff;
+    }
+
+    table.gayabaru td {
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #888;
+        background-color: #ffffff;
+        color: #000;
+    }
+</style>
+
+<body>
+    <div id="content"></div>
+</body>
+<script type="text/javascript">
+    var Mahasiswa = [
+        { "Nama": "Gofur", "Jenis Kelamin": "Pria", "Alamat Lengkap": "Jl.Danau Toba Rt.01/01 No.05, Sumatera Utara-Indonesia" },
+        { "Nama": "Marcell", "Jenis Kelamin": "Pria", "Alamat Lengkap": "Jl.Gerobak Andonk  Rt.02/05 No.06, Serayu Opak-Indonesia" },
+        { "Nama": "Shinta", "Jenis Kelamin": "Wanita", "Alamat Lengkap": "Jl.Jamrud Rt.03/07 No.09, Jakarta, Indonesia" }
+    ];
+
+
+    function buildTable(data) {
+        var table = document.createElement("table");
+        table.className = "gayabaru";
+        var thead = document.createElement("thead");
+        var tbody = document.createElement("tbody");
+        var headRow = document.createElement("tr");
+        ["Nama", "Jenis Kelamin", "Alamat Lengkap"].forEach(function (news) {
+            var th = document.createElement("th");
+            th.appendChild(document.createTextNode(news));
+            headRow.appendChild(th);
+        });
+        thead.appendChild(headRow);
+        table.appendChild(thead);
+        data.forEach(function (news) {
+            var tr = document.createElement("tr");
+            for (var i in news) {
+                var td = document.createElement("td");
+                td.appendChild(document.createTextNode(news[i]))
+                tr.appendChild(td);
+            }
+            tbody.appendChild(tr);
+        });
+        table.appendChild(tbody);
+        return table;
+    }
+    window.onload = function () {
+        document.getElementById("content").appendChild(buildTable(Mahasiswa));
+    }
+</script>
+
+</html>
