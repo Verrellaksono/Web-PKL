@@ -12,10 +12,6 @@ body {
 
 
 /* navbar */
-.head{
-    height: 800px;
-    background-image: url(https://i.pinimg.com/564x/e1/48/72/e14872ad1266367f1ddecd07fc471dc9.jpg);
-}
 
 .navbar{
     position: fixed;
